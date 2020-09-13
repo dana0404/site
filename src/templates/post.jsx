@@ -96,7 +96,8 @@ const Post = ({ post, meta }) => {
     return (
         <>
             <Helmet
-                title={`${post.post_title[0].text}`}
+                title={`${post.post_title[0].text} | Prist, Gatsby & Prismic Starter`}
+                titleTemplate={`%s | ${meta.title}`}
                 meta={[
                     {
                         name: `description`,
@@ -104,7 +105,7 @@ const Post = ({ post, meta }) => {
                     },
                     {
                         property: `og:title`,
-                        content: `${post.post_title[0].text}`,
+                        content: `${post.post_title[0].text} | Prist, Gatsby & Prismic Starter`,
                     },
                     {
                         property: `og:description`,
