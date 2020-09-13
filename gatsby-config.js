@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Dana | web dev`,
-        description: ``,
-    author: `Dana Davis`,
+    title: `Prist | Gatsby & Prismic Starter`,
+        description: `A starter powered by Gatsby and Prismic to showcase portfolios and blogs.`,
+    author: `Marguerite Roth | marguerite.io`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -26,7 +26,7 @@ module.exports = {
     {
         resolve: 'gatsby-source-prismic-graphql',
         options: {
-            repositoryName: 'site0404', // (REQUIRED, replace with your own)
+            repositoryName: 'prist', // (REQUIRED, replace with your own)
             linkResolver: () => post => `/${post.uid}`,
         }
     },
