@@ -50,7 +50,7 @@ const WorkLink = styled(Link)`
 `
 
 
-const Project = ({ project, meta }) => {
+const Project = ({ project, meta, home }) => {
     return (
         <>
             <Helmet
@@ -99,6 +99,12 @@ const Project = ({ project, meta }) => {
                         <img src={project.project_hero_image.url} alt="bees" />
                     </ProjectHeroContainer>
                 )}
+                <a href={project.project_link[0].text}
+               target="_blank" rel="noopener noreferrer">
+                <Button>
+                Try it out
+                </Button>
+            </a>
                 <ProjectBody>
                     {RichText.render(project.project_description)}
                     <WorkLink to={"/work"}>
@@ -137,6 +143,7 @@ export const query = graphql`
                         project_post_date
                         project_hero_image
                         project_description
+                        project_link
                         _meta {
                             uid
                         }
