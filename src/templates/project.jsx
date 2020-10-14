@@ -89,6 +89,9 @@ const Project = ({ project, meta, home }) => {
                         content: meta.description,
                     },
                 ].concat(meta)}
+                link={[
+                    { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }
+                ]}
             />
             <Layout>
                 <ProjectTitle>
